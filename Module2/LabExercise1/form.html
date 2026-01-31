@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="/LabExercise1/index.html">Home</a>
+      <a href="/LabExercise1/form.html">Form</a>
+    </nav>
+  </header>
+
+  <main>
+    <form method="POST" action="http://127.0.0.1:5500/form">
+        <div></div>
+        <label for="First name">First Name</label>
+        <input type="text" id="firstName" name="First Name" placeholder="First name">
+        </div>
+        <div>
+        <label for="Last Name">Last Name</label>
+        <input type="text" id="lastName" name="Last Name" placeholder="Last name">
+        </div>
+
+        <div>
+        <input type="radio" id="radioHTML" name="HTML radio" value="HTML radio" >
+        <label for="HTML radio">HTML</label>
+       
+        <input type="radio" id="radioCSS" name="CSS radio" value="CSS radio">
+        <label for="CSS radio">CSS</label>
+        
+        <input type="radio" id="radioJS" name="JS radio" value="JS radio">
+        <label for="JS radio">JavaScript</label>
+        </div>
+
+        <div>
+        <input type="checkbox" id="truckCheckbox" name="Truck checkbox" value="Truck">
+        <label for="Truck checkbox">Truck</label>
+        
+        
+        <input type="checkbox" id="suvCheckbox" name="SUV checkbox" value="SUV">
+        <label for="SUV checkbox">SUV</label>
+
+        <input type="checkbox" id="sedanCheckbox" name="Sedan checkbox" value="Sedan">
+        <label for="Sedan checkbox">Sedan</label>
+        </div>
+        <div>
+            <label for="Car Brand">Car Brand</label>
+            <select name="Car Brand">
+            <option value="Ford">Ford</option>
+            <option value="Honda">Honda</option>
+            <option value="Toyota">Toyota</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Submit Form</button>
+        </div>
+    </form>
+  </main>
+
+  <footer>Copyright &copy; 2024</footer>
+</body>
+
+</html>

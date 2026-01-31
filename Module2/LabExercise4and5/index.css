@@ -1,0 +1,67 @@
+@media screen and (min-width: 960px) {
+/* aside{
+    width: 20%;
+    height: 60%;
+    float: right;
+    text-align: center;
+    background-color: rgb(195, 191, 191);
+    border-radius: 5px;
+    margin: 10px;
+} */
+    
+}
+
+
+body{
+    font-family: "Roboto Mono", monospace
+}
+
+p{
+ font-size: 18px;  
+}
+
+#job-title{
+    font-size: 24px;
+    font-style: italic;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: rgb(195, 191, 191);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+aside{
+    width: 20%;
+    height: 60%;
+    float: right;
+    text-align: center;
+    background-color: rgb(195, 191, 191);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+a{
+    font-size: 24px;
+}
+
+footer{
+    position: sticky;
+    bottom: 0px;
+    background-color: rgb(195, 191, 191);
+    border-radius: 5px;
+    margin: 10px;
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+}
+
+img {
+    display: flex;
+    border-radius: 15px;
+    margin: auto;
+    width: 35%;
+    height: 40%;
+}

@@ -1,0 +1,100 @@
+article {
+    margin: 20px, 0px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.style-me1 {
+    color: red;
+}
+
+#style-me2 {
+    color: blue;
+}
+
+.style-me1#style-me2 {
+    color: purple
+}
+
+.my-descendants-are-styled > p {
+    background-color: red;
+}
+
+.my-children-are-styled > p {
+    background-color: lightgreen;
+}
+
+ .box {
+    background-color: gray;
+    margin: 10px, 10px, 10px, 10px;
+    padding: 50px, 50px;
+    width: 20vw !important;
+    height: 10vh !important;
+    box-sizing: border-box;
+    border-style: dotted;
+    border: 10px thin solid;
+    overflow: auto;
+    outline: 10px green double;
+    border-radius: 2%;
+    background-image: url(img1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.position-absolute {
+    position: absolute;
+    left: 10px;
+    background-color: aqua;
+    
+}
+
+.position-relative{
+    position: relative;
+    background-color: red;
+}
+
+.position-sticky {
+    position: sticky;
+    top: 0px;
+    background-color: green;
+}
+
+.text-style {
+    font-family: "Roboto Mono", monospace;
+    color: aquamarine;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 900;
+}
+
+a, a:link {
+    color: blueviolet;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: lightgreen;   
+}
+
+.calc-style {
+    width: calc(100vw - 100px);
+    background-color: aqua;
+}
+
+.fixed-width-col {
+    width: 350px;
+    display: inline-block;
+}
+
+.fluid-col {
+    display: inline-block;
+    width: calc(100vw - 430px);
+}
