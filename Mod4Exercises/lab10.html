@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <template id="card-template">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Item Name</h5>
+          <h6 class="card-subtitle">Item Price</h6>
+          <p class="card-text">Item Description</p>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Dynamic Data</title>
+  </head>
+
+  <body>
+    <div class="container">
+        <h2>placeholder</h2>
+    <div id="card-list" class="row"></div>
+    </div>
+
+    <script>
+      fetch('https://fakestoreapi.com/products')
+        .then((response) => response.json())
+        .then((json) => json.forEach(item => addItem(item)));
+
+
+
+      function addItem(item) {
+        const template = document.getElementById("card-template").content.cloneNode(true);
+
+        template.querySelector(".card-title").innerText = item.title;
+        template.querySelector(".card-text").innerText = item.description;
+        template.querySelector(".card-subtitle").innerText = item.price
+        template.querySelector('.card-img-top').src = item.url;
+        document.querySelector("#card-list").appendChild(template);
+      }
+
+
+
+    </script>
+  </body>
+</html>

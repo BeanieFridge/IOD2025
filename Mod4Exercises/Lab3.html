@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #e3f2fd;
+}
+.card {
+padding: 10px;
+}
+.card-title {
+font-weight: 600;
+font-size: 3em;
+padding: 0 0 10px 0;
+}
+.card-description {
+font-weight: 400;
+font-size: 2em
+}
+</style>
+</head>
+<body>
+<template id="card-template">
+<div class="card">
+<div class="card-body">
+<div class="card-title"></div>
+<div class="portfolio-items"></div>
+</div>
+</div>
+</template>
+
+<template id="portfolio-template">
+        <div class="portfolio-item">
+            <div class="portfolio-item-title"></div>
+            <img class="portfolio-item-image" width="600"/>
+        </div>
+    </template>
+
+<div id="card-list"></div>
+</body>
+<script>
+    // const arrayData = [{name: 'bob', age: 23}, {name: 'alice', age: 39}]
+
+
+// function getData() {
+//     return new Promise(resolve => {
+//         setInterval(function(){
+//             resolve(arrayData)
+//         }, 5000)
+//     })
+// }
+
+// getData().then( (data) => console.log(data))
+
+// function addCard(data) {
+// const template =
+// document.getElementById("card-template").content.cloneNode(true);
+
+// template.querySelector('.card-title').innerText =
+// data.name;
+// template.querySelector('.card-text').innerText =
+// data.age;
+// template.querySelector('.card-body').style.backgroundColor =
+// 'white';
+
+// document.querySelector('#card-list').appendChild(template);
+// }
+
+// getData().then( (data) => data.forEach(data => addCard(data)))
+
+
+//  ABOVE THIS LINE IS THE CODE FOR EXERCISE 1 AND 2 |  BELOW THIS LINE IS THE CODE FOR EXERCISE 3
+
+const arrayArtist = {
+    name: "Van Gogh",
+    portfolio:[
+        {title: "portrait", url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image"},
+        {title: "sky", url: "https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg"},
+    ]
+}
+
+
+
+function addCard(artist, portfolio) {
+const template = document.getElementById("card-template").content.cloneNode(true);
+
+template.querySelector('.card-title').innerText = artist
+
+portfolio.forEach(item => {
+    const itemTemplate = document.getElementById("portfolio-template").content.cloneNode(true);
+    itemTemplate.querySelector('.portfolio-item-title').innerText = item.title;
+    itemTemplate.querySelector('.portfolio-item-image').src = item.url;
+    itemTemplate.querySelector('.portfolio-item-image').alt = item.title;
+    template.querySelector('.portfolio-items').appendChild(itemTemplate);
+    })
+;
+document.querySelector('#card-list').appendChild(template);
+}
+
+addCard(arrayArtist.name, arrayArtist.portfolio)
+</script>
+</html>
