@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator example</title>
+  </head>
+  <body>
+    
+<label>Number #1: <input id="firstNumber" type="number"></label>
+<label>Number #2: <input id="secondNumber" type="number"></label>
+<br><br>
+
+    <div>
+
+    <button onclick="calculateSum('add')">Add</button>
+    <button onclick="calculateSum('subtract')">Subtract</button>
+    <button onclick="calculateSum('multiply')">Multiply</button>
+    <button onclick="calculateSum('divide')">Divide</button>
+</div>
+
+
+    <div>
+      Result
+      <span id="result"></span>
+    </div>
+  </body>
+  <script>
+    function calculateSum(operatorRoute){
+    let num1 = document.getElementById('firstNumber').value;
+    let num2 = document.getElementById('secondNumber').value;
+    
+
+    fetch(`/calculator/${operatorRoute}?num1=${num1}&num2=${num2}`)
+        .then((response) => response.json())
+        .then((data) => document.getElementById('result').innerHTML = data.result)
+    }
+  </script>
+</html>
